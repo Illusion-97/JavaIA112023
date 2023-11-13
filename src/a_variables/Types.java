@@ -13,5 +13,36 @@ public class Types {
         long aLong = 0;             // 64 bits  : pour des entiers dont la taille peut excéder la limite du type int
         double aDouble = 0.0d;      // 64 bits  : type par défaut utilisé pour les nombres à virgule
         // endregion
+
+        double nombreAVirgule = 5.36;
+        aBoolean = true;
+
+        // region Déclaration et Initialisation
+        // Ceci est une déclaration, {type} {nomDeVariable} : je déclare une variable que je pourrais utiliser par la suite dans mon code
+        // Attention une déclaration n'affecte pas automatiquement une valeur par défaut (dans une méthode l'initialisation est obligatoire)
+        boolean anotherBoolean;
+        // La premiere affectation d'une valeur à une variable déclarée, est appelée initialisation
+        anotherBoolean = true;
+        // Ici, je déclare et initialise une variable en une seule ligne {type} {nomDeVariable} = {valeur}
+        int anotherInt = 52;
+        //
+
+        // region REFERENCE
+        // Les types référence n'ont pas de taille mémoire prédéfinie, de ce fait, leur valeur par défaut est 'null'
+        String aString = null;
+        aString = "Je suis une chaine de caractères";
+
+        // Différence avec les primitifs :
+        // byte étant forcément sur 8 bits, dans la mémoire une référence de ce type serait par défaut : 00000000
+        // String n'ayant pas de taille, tant qu'une valeur "réelle" ne lui est pas affectée, par défaut (considérant une taille de 0) : '' traduit par null
+
+        // Cette fonction me permet d'afficher quelque chose dans le terminal de mon application
+        System.out.println("J'affiche une ligne"); // raccourci 'sout'
+        System.out.println(aBoolean); // la fonction fait automatiquement la conversion vers du texte lisible
+        System.out.println(aString);
+
+
+        Object anObject = null;
+        // endregion
     }
 }
