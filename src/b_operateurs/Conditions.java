@@ -148,7 +148,6 @@ public class Conditions {
             default:
                 System.out.println("Mid Value");
         }
-
         //endregion
     }
 

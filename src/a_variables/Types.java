@@ -1,5 +1,7 @@
 package a_variables;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Types {
@@ -75,7 +77,42 @@ public class Types {
         int anIntFromWrapperParseStringValue = Integer.parseInt("0"); // Utile pour valider des saisies utilisateur
         // end
 
+        // region COLLECTIONS
+        System.out.println("\nCollections :");
+        // Tableaux
+        int[] anIntArray = {150,17,29,93,46}; // Je crée un tableau avec des valeurs préféfinies
+        String aStringArray[] = {"A String Value", "Another String Value"};
+        String[] aDefaultStringArray = new String[10]; // Je crée un tableau de 10 chaines de caractères
+        boolean[] aDefaultBooleanArray = new boolean[5]; // [false,false,false,false,false]
+        System.out.println(aDefaultStringArray[0]); // Affiche la premiere valeur de mon tableau
+        System.out.println(anIntArray[3]); // Les index commencent à 0; (ceci affiche la 4e valeur)
 
+        boolean[][] aBooleanTable = {{true,false},{false,true, true},{}};
+        // aBooleanTable[0] : {true,false}
+        // aBooleanTable[1] : {false,true, true}
+        // aBooleanTable[2] : {}
+        System.out.println(aBooleanTable[1][2]);
+        //System.out.println(aBooleanTable[2][0]); OutOfBound
+        boolean[][] aDafaultBooleanTable = new boolean[3][3];
+        /*
+        * {false,false,false}
+        * {false,false,false}
+        * {false,false,false}
+        * */
+        // La taille d'un tableau est immutable, en cas de besoin il faut réaffecter la variable
+
+        // Les listes sont des collections d'un type dont la taille est variable
+        // la déclaration d'une liste se fait via 'la classe' List
+        // dont on viens préciser entre <> (chevrons) le type d'éléments contenus
+        List<String> aStringList = new ArrayList<>(); // ArrayList est un type de List
+        // Particularité pour les types primitifs
+        List<Boolean> aBooleanList = new ArrayList<>();
+        List<Integer> anIntList = new ArrayList<>();
+
+        anIntArray[1] = 153;
+        System.out.println("List : ");
+        anIntList.add(153);
+        System.out.println(anIntList.get(0));
     }
 
 
