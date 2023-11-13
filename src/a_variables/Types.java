@@ -1,5 +1,7 @@
 package a_variables;
 
+import java.util.Objects;
+
 public class Types {
     public static void main(String[] args) {
         // region PRIMITIFS
@@ -31,6 +33,7 @@ public class Types {
         // Les types référence n'ont pas de taille mémoire prédéfinie, de ce fait, leur valeur par défaut est 'null'
         String aString = null;
         aString = "Je suis une chaine de caractères";
+        aString = "Je suis une autre chaine de caractères";
 
         // Différence avec les primitifs :
         // byte étant forcément sur 8 bits, dans la mémoire une référence de ce type serait par défaut : 00000000
@@ -39,10 +42,50 @@ public class Types {
         // Cette fonction me permet d'afficher quelque chose dans le terminal de mon application
         System.out.println("J'affiche une ligne"); // raccourci 'sout'
         System.out.println(aBoolean); // la fonction fait automatiquement la conversion vers du texte lisible
-        System.out.println(aString);
 
 
+        // En java tous les types référence SONT des Objets (sont de type Object)
         Object anObject = null;
+        System.out.println("aString Value :");
+        System.out.println(aString);
+        // Cette fonction demande, à l'intérieur de ma variable de type String, de changer tous les espaces en -
+        System.out.println("Appel de la fonction Replace");
+        aString.replace(" ", "-");
+        System.out.println("Résultat après appel : ");
+        System.out.println(aString);
+        // Les String sont dit Immutable : la valeur affectée ne peut pas se modifier
+        System.out.println("Retour de la fonction Replace : ");
+        System.out.println(aString.replace(" ", "-"));
+        aString = aString.replace(" ", "-");
+        System.out.println("Nouvelle valeur de aString après réaffectation :");
+        System.out.println(aString);
+        // Point particulier avec les String, pour conserver un changement effectué via une méthode
+        // il faut réaffecter la variable avec le résultat de la méthode
         // endregion
+
+        System.out.printf("%n%n%n");
+        test();
+
+        // region WRAPPER
+        Integer anIntWrapper = 0; // int anInt = 0;
+        int anIntFromWrapper = new Integer(0); // Déprécié
+        // WRAPPER.valueOf({value}) permet d'obtenir une donnée du type primitif associé au wrapper
+        int anIntFromWrapperValue = Integer.valueOf(0); // Situationnel : vérifier une correspondance de type
+        int anIntFromWrapperStringValue = Integer.valueOf("0"); // Déprécié
+        int anIntFromWrapperParseStringValue = Integer.parseInt("0"); // Utile pour valider des saisies utilisateur
+        // end
+
+
+    }
+
+
+    private static void test() {
+        // une valeur de type String s'écrit entre "
+        // une valeur de type char s'écrit entre '
+        String aString = "String Content";
+        System.out.println("Before Replace : " + aString); // Concaténation
+        aString = aString.replace(" ", "");
+        String afterReplace = "After Replace : ";
+        System.out.println(afterReplace + aString);
     }
 }
