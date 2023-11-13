@@ -3,6 +3,7 @@ package a_variables;
 public class Types {
     public static void main(String[] args) {
         // region PRIMITIFS
+        // Les types primitifs ont des tailles mémoire prédéfinies ce qui leur permet d'avoir des valeurs par défaut.
         boolean aBoolean = false;   // 1 bit    : type le plus simple pour effectuer des vérifications
         byte aByte = 0;             // 8 bits   : pour des nombres cours ou pour la constitution de fichiers
         short aShort = 0;           // 16 bits  : pour des données plus lourdes qu'un type byte
