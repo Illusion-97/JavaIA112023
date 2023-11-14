@@ -68,8 +68,38 @@ public class Boucles {
         */
         // Je crée une table dont toutes les lignes ont le même nombre de colonnes
         boolean[][] aRandomBooleanTable = new boolean[random.nextInt(origin,bound)][random.nextInt(origin,bound)];
-
-
+        /*
+         * {false,false,false}
+         * {false,false,false}
+         * {false,false,false}
+         * {false,false,false}
+        * */
+        // aBooleanTable[0] : {true,false}
+        // aBooleanTable[1] : {false,true, true}
+        // aBooleanTable[2] : {}
+        // affectation d'un boolean aléatoire = random.nextBoolean();
+        // aRandomBooleanTable[2][1] = random.nextBoolean();
+        // 1er objectif : affecter une valeur aléatoire a tous les emplacements de 'aRandomBooleanTable'
+        for (int i = 0; i < aRandomBooleanTable.length; i++) {
+            // i représente l'index d'une ligne de la table
+            //boolean[] line = aRandomBooleanTable[i];
+            for (int j = 0; j < aRandomBooleanTable[i].length; j++) {
+                // j représente l'index d'une colonne
+                aRandomBooleanTable[i][j] = random.nextBoolean();
+            }
+        }
+        /*
+         * {false,true,false}
+         * {true,true,true}
+         * {true,false,true}
+         * {false,false,false}
+         * */
+        /*
+         * {X,O,X}
+         * {O,O,O}
+         * {O,X,O}
+         * {X,X,X}
+         * */
 
     }
 }
