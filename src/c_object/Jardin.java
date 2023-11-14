@@ -41,6 +41,7 @@ public class Jardin {
         petiot.happyBirthday();
 
 
-
+        Malinois era = new Malinois("Era");
+        System.out.println("era.nom = " + era.nom);
     }
 }
