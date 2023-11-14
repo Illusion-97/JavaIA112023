@@ -163,7 +163,7 @@ public class Types {
         aStringList.add("doublon");
         aStringList.add("doublon");
         System.out.println("Taille de la liste après ajout de doublons : " + aStringList.size());
-
+        List<String> anotherStringList = List.of("une","deux","trois");
 
     }
 

@@ -1,5 +1,6 @@
 package b_operateurs;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class MathOperations {
@@ -93,7 +94,31 @@ public class MathOperations {
         //endregion
 
         //region Random
+
+        System.out.println("\nRandom : ");
+        // Java fournis un générateur de données aléatoires : la classe Random
+        // Le premier objet nécessaire pour cette génération est une instance de la classe random
         Random random = new Random();
+        boolean randomBoolean = random.nextBoolean();
+        System.out.println("randomBoolean = " + randomBoolean);
+        int randomInt = random.nextInt();
+        System.out.println("randomInt = " + randomInt);
+        long randomLong = random.nextLong();
+        System.out.println("randomLong = " + randomLong);
+
+        int randomIntWithBound = random.nextInt(10); // From 0 à 9;
+        System.out.println("randomIntWithBound = " + randomIntWithBound);
+
+        int randomIntWithFromTo = random.nextInt(5,13); // From 5 à 12;
+        System.out.println("randomIntWithFromTo = " + randomIntWithFromTo);
+
+        // Il est aussi possible de générer un ensemble de données aléatoires
+        // via la méthode du nom du type au pluriel
+        // on peut également préciser la taille du tableau voulu (ici : 5)
+        double[] randomDoubleArray = random.doubles(5).toArray();
+        System.out.println("randomDoubleArray = " + Arrays.toString(randomDoubleArray));
+        int[] randomIntArray = random.ints(5, 5,13).toArray();
+        System.out.println("randomIntArray = " + Arrays.toString(randomIntArray));
         //endregion
     }
 }
