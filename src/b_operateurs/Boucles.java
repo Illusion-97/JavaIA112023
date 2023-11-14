@@ -80,6 +80,9 @@ public class Boucles {
         // affectation d'un boolean aléatoire = random.nextBoolean();
         // aRandomBooleanTable[2][1] = random.nextBoolean();
         // 1er objectif : affecter une valeur aléatoire a tous les emplacements de 'aRandomBooleanTable'
+
+        System.out.println();
+        System.out.println("aRandomBooleanTable : Affectation de valeurs aléatoires");
         for (int i = 0; i < aRandomBooleanTable.length; i++) {
             // i représente l'index d'une ligne de la table
             //boolean[] line = aRandomBooleanTable[i];
@@ -95,11 +98,64 @@ public class Boucles {
          * {false,false,false}
          * */
         /*
-         * {X,O,X}
-         * {O,O,O}
-         * {O,X,O}
-         * {X,X,X}
+         * {XOX}
+         * {OOO}
+         * {OXO}
+         * {XXX}
          * */
+
+        System.out.println();
+        System.out.println("aRandomBooleanTable : Solution Fori");
+        for (int i = 0; i < aRandomBooleanTable.length; i++) {
+            System.out.print("{");
+            for (int j = 0; j < aRandomBooleanTable[i].length; j++) {
+                if (aRandomBooleanTable[i][j]) {
+                    System.out.print("O");
+                } else {
+                    System.out.print("X");
+                }
+                // Ceci remplace le if-else précédent
+                //System.out.print(aRandomBooleanTable[i][j] ? "O" : "X");
+            }
+            System.out.println("}");
+        }
+
+
+        System.out.println();
+        System.out.println("aRandomBooleanTable : Solution ForEach");
+        // boolean[][] aRandomBooleanTable;
+        for (boolean[] line: aRandomBooleanTable) {
+            System.out.print("{");
+            for (boolean colonne : line) {
+                System.out.print(colonne ? "O" : "X");
+            }
+            System.out.println("}");
+        }
+
+
+
+        System.out.println();
+        System.out.println("boucle while : ");
+        int max = 10;
+        int current = 0;
+        while (current < max) {
+            System.out.println("Valeur actuelle : " + current);
+            // ne jamais oublier de mettre à jour la condition
+            current++;
+            // value++ équivaut à : value += 1 équivaut à : value = value + 1;
+        }
+
+        boolean booleanFalse = false;
+
+        while (booleanFalse) {
+            //Ceci ne sera jamais exécuté puisque la condition est fausse avant d'y arriver
+            System.out.println("Je suis dans un while");
+        }
+
+        do {
+            // Ceci sera exécuté une fois avant la vérification de la condition
+            System.out.println("Je suis dans un do-while");
+        } while (booleanFalse);
 
     }
 }
