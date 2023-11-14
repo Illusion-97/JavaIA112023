@@ -1,5 +1,7 @@
 package a_variables;
 
+import c_object.Animal;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -176,5 +178,8 @@ public class Types {
         aString = aString.replace(" ", "");
         String afterReplace = "After Replace : ";
         System.out.println(afterReplace + aString);
+
+        Animal unAnimal = new Animal();
+        System.out.println("unAnimal.id = " + unAnimal.id);
     }
 }
