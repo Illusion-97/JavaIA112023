@@ -111,8 +111,60 @@ public class Types {
 
         anIntArray[1] = 153;
         System.out.println("List : ");
+        // Ajout de la valeur 153 dans la liste anIntList
         anIntList.add(153);
+        // Affiche la valeur a l'index 0 dans anIntList
         System.out.println(anIntList.get(0));
+
+
+
+        System.out.println();
+        System.out.println("aStringList:");
+        aStringList = new ArrayList<>();
+
+        // Ajout de la valeur 'first' dans aStringList
+        aStringList.add("first");
+        String second = "second";
+        // la fonction add ajoute la valeur en fin de liste
+        aStringList.add(second);
+
+        // Affiche la premiere valeur de la liste
+        System.out.println("Première valeur : " + aStringList.get(0));
+        // first
+        String third = "third";
+        // Ceci ajoute third dans la liste à l'index 0
+        aStringList.add(0,third);
+        aStringList.add(1,"fourth");
+
+        System.out.println("Première valeur après ajouts indexés : " + aStringList.get(0)); // third
+        // Pour connaitre la position d'un élément dans la liste on utilise la fonction indexOf()
+        System.out.println("Index de 'first' : " + aStringList.indexOf("first"));
+
+        //Pour connaitre la taille de la liste
+        System.out.println("Taille de la liste : " + aStringList.size());
+
+        // Si jamais on cherche l'index d'un élément qui n'est pas dans la liste j'obtiens '-1'
+        System.out.println("Index de 'fifth' : " + aStringList.indexOf("fifth"));
+
+        // Pour supprimer le premier element de la liste (ou à un index particulier)
+        aStringList.remove(0);
+        System.out.println("Première valeur après suppression : " + aStringList.get(0)); // third
+        System.out.println("Taille de la liste après suppression : " + aStringList.size());
+
+        // Pour supprimer un object directement
+        aStringList.remove(second);
+        // vérification de la suppression
+        System.out.println("Index de 'second' : " + aStringList.indexOf(second));
+
+        // Une liste peut contenir des doublons :
+        aStringList.add("doublon");
+        aStringList.add("doublon");
+        aStringList.add("doublon");
+        aStringList.add("doublon");
+        aStringList.add("doublon");
+        System.out.println("Taille de la liste après ajout de doublons : " + aStringList.size());
+
+
     }
 
 
