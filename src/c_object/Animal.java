@@ -24,6 +24,9 @@ public class Animal {
     *  static : rends l'attribut propre à la classe et la partage avec toutes les instances
     * */
     public static long count = 0;
+    public enum AgeRange { // enum est static par défaut
+        JEUNE,ADULTE,SENIOR
+    }
     Animal[] parents; // visibilité : default
     protected String nom;
     public long id;
@@ -60,6 +63,21 @@ public class Animal {
         age = 0;
         id = 5;
         nom = "Toto";
+    }
+
+    public AgeRange getAgeRange() {
+        if(age < 3) {
+            return AgeRange.JEUNE;
+        } else if (age > 6) {
+            return AgeRange.SENIOR;
+        } else {
+            return AgeRange.ADULTE;
+        }
+    }
+
+    public void happyBirthday() {
+        age++;
+        System.out.printf("Happy Birthday to %s : %d an(s)%n",nom,age);
     }
 
     @Override
