@@ -60,5 +60,16 @@ public class Boucles {
         System.out.printf("anIntArray : {%s}%n", Arrays.stream(anIntArray)
                 .mapToObj(String::valueOf)
                 .collect(Collectors.joining(", ")));
+
+
+        /*
+        aRandomBooleanTable[1][1] = true;
+        System.out.println(aRandomBooleanTable[0][0]);
+        */
+        // Je crée une table dont toutes les lignes ont le même nombre de colonnes
+        boolean[][] aRandomBooleanTable = new boolean[random.nextInt(origin,bound)][random.nextInt(origin,bound)];
+
+
+
     }
 }
