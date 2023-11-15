@@ -13,6 +13,28 @@ public class Malinois extends Animal implements Chien {
         super(nom, age, parent, otherParent);
     }
 
+    @Override
+    public Malinois getChild(Animal otherParent, String nom) {
+        return new Malinois(nom,0,this,otherParent);
+    }
+
+    /*
+    Dans le cas ou on voudrait rendre aléatoire la classe de l'enfant si les parents sont différents
+    Je ne peux plus utiliser la précision du type de retour, je dois renvoyer le type parent
+
+    public Animal getChild(Animal otherParent, String nom) {
+        try {
+            Malinois autreMalinois = (Malinois) otherParent;
+            return new Malinois(nom,0,this,otherParent);
+        } catch (Exception e) {
+            if(new Random().nextInt(0,101) >= 50) {
+                return new Malinois(nom,0,this,otherParent);
+            } else {
+                return new BergerAllemand(nom,0,this,otherParent);
+            }
+        }
+    }*/
+
     public Malinois() {
 
     }

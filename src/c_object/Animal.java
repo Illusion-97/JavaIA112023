@@ -87,6 +87,8 @@ public abstract class Animal {
         System.out.printf("Happy Birthday to %s : %d an(s)%n",nom,age);
     }
 
+    public abstract Animal getChild(Animal otherParent, String nom);
+
     @Override
     public String toString() {
         return nom;

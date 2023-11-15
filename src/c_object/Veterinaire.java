@@ -17,4 +17,8 @@ public class Veterinaire {
         }
         System.out.println("nbBerger = " + nbBerger);
     }
+
+    public static Animal croiser(Animal parent, Animal otherParent, String nom) {
+        return parent.getChild(otherParent,nom);
+    }
 }

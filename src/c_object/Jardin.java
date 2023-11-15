@@ -96,6 +96,17 @@ public class Jardin {
         System.out.println("\n Berger Allemand VS Malinois :");
         leoBerger.fight(era);
 
+
+        System.out.println("\nCroisements :");
+        // la classe abstraite ne me permet pas de définir à l'avance le type de l'enfant
+        Animal chienErrant = unAnimal.getChild(unAutreAnimal, "chienErrant");
+        // Mais en cas de croisement depuis un animal dont on connait le type
+        Malinois eraChild = era.getChild(leo,"eraChild");
+        // On sait quel est le retour
+        BergerAllemand leoChild = leoBerger.getChild(unAnimal,"leoChild");
+        // Sinon à moi de me débrouiller pour savoir en quoi faire la conversion à partir de mes données
+        Malinois chienOutcast = (Malinois) unAnimal.getChild(unAutreAnimal, "chienOutcast");
+
     }
 
     private static Chien castVersChien(BergerAllemand bergerAllemand) {

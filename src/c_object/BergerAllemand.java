@@ -16,6 +16,11 @@ public class BergerAllemand extends Animal implements Chien {
         pride = 10;
     }
 
+    @Override
+    public BergerAllemand getChild(Animal otherParent, String nom) {
+        return new BergerAllemand(nom, 0, this, otherParent);
+    }
+
     public BergerAllemand() {
 
     }
