@@ -87,7 +87,10 @@ public class Jardin {
 
         FightClub.afficherCombattants();
 
-
+        System.out.println("\n Malinois VS Berger Allemand :");
+        era.fight(leoBerger);
+        System.out.println("\n Berger Allemand VS Malinois :");
+        leoBerger.fight(era);
 
     }
 
