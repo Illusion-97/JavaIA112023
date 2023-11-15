@@ -25,9 +25,18 @@ public class Malinois extends Animal implements Chien {
         }
     }
 
+    /**
+     * Le malinois se bat pour l'honneur de son maître
+     * S'il gagne il lui saute dessus, sinon il part se cacher
+     * @param enemy
+     */
     @Override
     public void fight(Chien enemy) {
         System.out.println(nom + " se bat pour l'honneur de son maître");
-        Chien winner = getWinner(enemy);
+
+        /*if (this == getWinner(enemy)) System.out.println(nom + " saute sur son maître !");
+        else System.out.println(nom + " part se cacher !");*/
+
+        System.out.println(nom + (this == getWinner(enemy) ? " saute sur son maître !" : " part se cacher !"));
     }
 }

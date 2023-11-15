@@ -43,9 +43,14 @@ public class BergerAllemand extends Animal implements Chien {
         //bark(pride < 10 ? "Awww" : "WOOFF".repeat(pride));
     }
 
+    /**
+     * Le Berger Allemand se bat pour sa fierté
+     * Il utilise displayPride s'il gagne
+     * @param enemy
+     */
     @Override
     public void fight(Chien enemy) {
         System.out.println(nom + " se bat pour sa fierté");
-        Chien winner = getWinner(enemy);
+        if (this == getWinner(enemy)) displayPride();
     }
 }

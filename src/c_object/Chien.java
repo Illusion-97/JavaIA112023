@@ -14,7 +14,7 @@ public interface Chien {
     public void fight(Chien enemy);
     default Chien getWinner(Chien enemy) {
         Chien winner = new Random().nextBoolean() ? this : enemy;
-        winner.bark(winner + "remporte la bataille !");
+        winner.bark(winner + " remporte la bataille !");
         return winner;
     }
 }
