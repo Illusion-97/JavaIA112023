@@ -183,4 +183,9 @@ public class Types {
         Animal unAnimal = new Malinois();
         System.out.println("unAnimal.id = " + unAnimal.id);
     }
+
+    public static void nullReplace() {
+        String nullString = null;
+        nullString.replace(";", "!");
+    }
 }
