@@ -78,10 +78,12 @@ public class Jardin {
         System.out.println("\nFightClub :");
         Chien chienMalinois = new Malinois("chienMalinois", 2, null, null);
         Chien chienBerger = castVersChien(leoBerger);
+        System.out.print(chienMalinois + " aboie : ");
         chienMalinois.bark();
         //chienBerger.displayPride(); leoBerger est actuellement considéré comme un Chien
         BergerAllemand chienBergerEnBerger = castChienVersBergerAllemand(chienBerger);
-        chienBergerEnBerger.displayPride();
+        System.out.print(chienBergerEnBerger + " aboie : ");
+        chienBergerEnBerger.bark();
 
         FightClub.afficherCombattants();
 

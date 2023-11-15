@@ -8,6 +8,9 @@ public class FightClub {
 
     public static void afficherCombattants() {
         System.out.println("\nCombattants :");
-        combattants.forEach(System.out::println);
+        for (Chien chien : combattants) {
+            System.out.print(chien + " aboie : ");
+            chien.bark();
+        }
     }
 }

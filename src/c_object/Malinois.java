@@ -14,6 +14,13 @@ public class Malinois extends Animal implements Chien {
     @Override // Réécrit le comportement d'une méthode déjà déclarée
     public void bark() { // une méthode dont le comportement n'est pas défini dans une interface
         // doit être explicitement écrite dans la classe qui l'implémente
+        //AgeRange trancheAge = getAgeRange();
+        switch (getAgeRange()) {
+            case JEUNE -> bark("HawHaw");
+            case ADULTE -> bark("WafWaf");
+            case SENIOR -> bark("Wouf");
+            default -> bark("aww");
+        }
     }
 
     @Override

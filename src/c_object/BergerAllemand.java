@@ -26,9 +26,19 @@ public class BergerAllemand extends Animal implements Chien {
         System.out.println(nom + " démontre sa fierté");
     }
 
+    /**
+     * Le Berger Allemand fait un cri de chien battu si sa fierté est inférieure à 10
+     * sinon il aboie autant de fois qu'il a de fierté
+     */
     @Override
     public void bark() {
-
+        if(pride < 10) {
+            bark("Awww");
+        } else  {
+            String wooff = "WOOFF";
+            bark(wooff.repeat(pride));
+        }
+        //bark(pride < 10 ? "Awww" : "WOOFF".repeat(pride));
     }
 
     @Override
