@@ -106,6 +106,7 @@ public class Jardin {
         BergerAllemand leoChild = leoBerger.getChild(unAnimal,"leoChild");
         // Sinon à moi de me débrouiller pour savoir en quoi faire la conversion à partir de mes données
         Malinois chienOutcast = (Malinois) unAnimal.getChild(unAutreAnimal, "chienOutcast");
+        Veterinaire.bilanDeSante();
 
     }
 
