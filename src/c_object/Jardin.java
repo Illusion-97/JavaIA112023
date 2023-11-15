@@ -1,6 +1,8 @@
 package c_object;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Jardin {
 
@@ -40,8 +42,36 @@ public class Jardin {
         System.out.println("Animal.count = " + Animal.count);
         petiot.happyBirthday();
 
+        System.out.println("\nHéritage : ");
 
         Malinois era = new Malinois("Era");
         System.out.println("era.nom = " + era.nom);
+
+        BergerAllemand unBergerAllemand = new BergerAllemand("berger", 8, null, null);
+        System.out.println(unBergerAllemand.getAgeRange());
+        Animal leo = new BergerAllemand("leo", 5, null, null);
+        leo.happyBirthday();
+        Animal eraAnimal = era;
+        System.out.println(eraAnimal.getAgeRange().name());
+        // System.out.println(leo.getPride()); N'est pas possible puisque leo est considéré actuellement comme un Animal
+        BergerAllemand leoBerger = (BergerAllemand) leo; // Cast (conversion) : Animal leo -> BergerAllemand leoBerger
+        // Une fois la conversion effectuée entre la classe Animal et la classe BergerAllemand
+        System.out.println(leoBerger.getPride()); // je peux afficher la fierté de leo
+
+
+        System.out.println("\nChenil : ");
+        int nbBerger = 0;
+        for (Animal animal : Animal.chenil) {
+            System.out.println(animal + " passe un bilan de santé : ");
+            System.out.println("Tranche d'age : " + animal.getAgeRange());
+            System.out.println("Espece : " + animal.getClass().getSimpleName());
+            try {
+                BergerAllemand berger = (BergerAllemand) animal;
+                berger.displayPride();
+                nbBerger++;
+            } catch (Exception e){}
+            System.out.println();
+        }
+        System.out.println("nbBerger = " + nbBerger);
     }
 }

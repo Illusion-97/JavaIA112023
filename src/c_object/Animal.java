@@ -11,6 +11,7 @@ import java.util.List;
 public class Animal {
     public static String nomStatic = "Animal";
     public static List<String> registre = new ArrayList<>();
+    public static List<Animal> chenil = new ArrayList<>();
     /*
     * Une variable déclarée directement dans une classe (et non dans une méthode) est appelée attribut de cette classe
     * Cette déclaration implique une précision : la visibilité de cet attribut au sein du programme
@@ -38,6 +39,7 @@ public class Animal {
         parents = new Animal[2];
         count++;
         id = count;
+        chenil.add(this);
     }
 
     public Animal(String nom) {
