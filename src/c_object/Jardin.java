@@ -51,16 +51,16 @@ public class Jardin {
         System.out.println(unBergerAllemand.getAgeRange());
         Animal leo = new BergerAllemand("leo", 5, null, null);
         leo.happyBirthday();
-        Animal eraAnimal = era;
+        Animal eraAnimal = castVersAnimal(era);
         System.out.println(eraAnimal.getAgeRange().name());
         // System.out.println(leo.getPride()); N'est pas possible puisque leo est considéré actuellement comme un Animal
-        BergerAllemand leoBerger = (BergerAllemand) leo; // Cast (conversion) : Animal leo -> BergerAllemand leoBerger
+        BergerAllemand leoBerger = castAnimalVersBergerAllemand(leo); // Cast (conversion) : Animal leo -> BergerAllemand leoBerger
         // Une fois la conversion effectuée entre la classe Animal et la classe BergerAllemand
         System.out.println(leoBerger.getPride()); // je peux afficher la fierté de leo
 
 
         System.out.println("\nChenil : ");
-        int nbBerger = 0;
+        /*int nbBerger = 0;
         for (Animal animal : Animal.chenil) {
             System.out.println(animal + " passe un bilan de santé : ");
             System.out.println("Tranche d'age : " + animal.getAgeRange());
@@ -72,6 +72,36 @@ public class Jardin {
             } catch (Exception e){}
             System.out.println();
         }
-        System.out.println("nbBerger = " + nbBerger);
+        System.out.println("nbBerger = " + nbBerger);*/
+        Veterinaire.bilanDeSante();
+
+        System.out.println("\nFightClub :");
+        Chien chienMalinois = new Malinois("chienMalinois", 2, null, null);
+        Chien chienBerger = castVersChien(leoBerger);
+        chienMalinois.bark();
+        //chienBerger.displayPride(); leoBerger est actuellement considéré comme un Chien
+        BergerAllemand chienBergerEnBerger = castChienVersBergerAllemand(chienBerger);
+        chienBergerEnBerger.displayPride();
+
+        FightClub.afficherCombattants();
+
+
+
+    }
+
+    private static Chien castVersChien(BergerAllemand bergerAllemand) {
+        return (Chien) bergerAllemand; // Convertis un BergerAllemand en Chien
+    }
+
+    private static Animal castVersAnimal(Malinois malinois) {
+        return (Animal) malinois; // Convertis un Malinois en Animal
+    }
+
+    private static BergerAllemand castChienVersBergerAllemand(Chien chien) {
+        return (BergerAllemand) chien; // Convertis un Chien en BergerAllemand
+    }
+
+    private static BergerAllemand castAnimalVersBergerAllemand(Animal animal) {
+        return (BergerAllemand) animal; // Convertis un Animal en BergerAllemand
     }
 }

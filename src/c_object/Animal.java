@@ -40,6 +40,10 @@ public class Animal {
         count++;
         id = count;
         chenil.add(this);
+        try {
+            Chien chien = (Chien) this;
+            FightClub.combattants.add(chien);
+        } catch (Exception ignored) {}
     }
 
     public Animal(String nom) {

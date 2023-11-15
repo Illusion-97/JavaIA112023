@@ -1,7 +1,7 @@
 package c_object; // pas de majuscules dans les noms de package
 
 // Pas d'espace, Commence par une majuscule et on en met une autre a chaque nouveau mot
-public class BergerAllemand extends Animal {
+public class BergerAllemand extends Animal implements Chien {
     // Même principe pour les attributs et les méthodes, hormis la première lettre en minuscule
     /*
     *
@@ -24,5 +24,15 @@ public class BergerAllemand extends Animal {
 
     public void displayPride() {
         System.out.println(nom + " démontre sa fierté");
+    }
+
+    @Override
+    public void bark() {
+
+    }
+
+    @Override
+    public void fight(Chien enemy) {
+
     }
 }
