@@ -9,7 +9,8 @@ public class Jardin {
     public static void main(String[] args) {
         // Une Déclaration d'objet telle que ci-dessous crée une instance de la classe
         System.out.println("Animal.nomStatic = " + Animal.nomStatic);
-        Animal unAnimal = new Animal(); // new fait appel au constructeur de la classe
+        //Animal unAnimal = new Animal(); // new fait appel au constructeur de la classe
+        Animal unAnimal = new Malinois(); // new fait appel au constructeur de la classe
         System.out.println("unAnimal.id = " + unAnimal.id);
         System.out.println("unAnimal.nom = " + unAnimal.nom);
         unAnimal.happyBirthday();
@@ -20,13 +21,15 @@ public class Jardin {
         System.out.println("unAnimal.id = " + unAnimal.id);
         System.out.println("unAnimal.nom = " + unAnimal.nom);
         System.out.println("unAnimal.getAgeRange().name() = " + unAnimal.getAgeRange().name());
-        Animal unAutreAnimal = new Animal();
+        //Animal unAutreAnimal = new Animal();
+        Animal unAutreAnimal = new BergerAllemand();
         System.out.println("unAutreAnimal.id = " + unAutreAnimal.id);
         System.out.println("unAutreAnimal.nom = " + unAutreAnimal.nom);
         System.out.println("Animal.count = " + Animal.count);
         System.out.println("Animal.nomStatic = " + Animal.nomStatic);
         unAutreAnimal.happyBirthday();
-        Animal bambino = new Animal("Bambino");
+        //Animal bambino = new Animal("Bambino");
+        Animal bambino = new Malinois("Bambino");
         bambino.happyBirthday();
         bambino.happyBirthday();
         bambino.happyBirthday();
@@ -34,7 +37,8 @@ public class Jardin {
         System.out.println("bambino.nom = " + bambino.nom);
         System.out.println("Animal.count = " + Animal.count);
 
-        Animal petiot = new Animal("Petiot", 3, bambino, null);
+        //Animal petiot = new Animal("Petiot", 3, bambino, null);
+        Animal petiot = new BergerAllemand("Petiot", 3, bambino, null);
         System.out.println("petiot.id = " + petiot.id);
         System.out.println("petiot.nom = " + petiot.nom);
         System.out.println("petiot.getAgeRange().name() = " + petiot.getAgeRange().name());

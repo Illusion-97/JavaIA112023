@@ -8,7 +8,8 @@ import java.util.List;
 * on y retrouvera des attributs pour en exprimer l'apparence
 * et des comportement (méthodes)
 * */
-public class Animal {
+// Une classe dite abstraite permet l'utilisation de l'héritage, mais empêche la construction directe d'objet de cette classe
+public abstract class Animal {
     public static String nomStatic = "Animal";
     public static List<String> registre = new ArrayList<>();
     public static List<Animal> chenil = new ArrayList<>();

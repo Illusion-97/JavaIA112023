@@ -16,6 +16,10 @@ public class BergerAllemand extends Animal implements Chien {
         pride = 10;
     }
 
+    public BergerAllemand() {
+
+    }
+
 
     /**
      * Représente la fierté de l'animal
