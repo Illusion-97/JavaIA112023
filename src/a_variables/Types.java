@@ -1,6 +1,7 @@
 package a_variables;
 
 import c_object.Animal;
+import c_object.Malinois;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -179,7 +180,7 @@ public class Types {
         String afterReplace = "After Replace : ";
         System.out.println(afterReplace + aString);
 
-        Animal unAnimal = new Animal();
+        Animal unAnimal = new Malinois();
         System.out.println("unAnimal.id = " + unAnimal.id);
     }
 }
