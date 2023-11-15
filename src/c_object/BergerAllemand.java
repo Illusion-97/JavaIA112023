@@ -46,7 +46,6 @@ public class BergerAllemand extends Animal implements Chien {
     @Override
     public void fight(Chien enemy) {
         System.out.println(nom + " se bat pour sa fierté");
-        Chien winner = new Random().nextBoolean() ? this : enemy;
-        winner.bark(winner + "remporte la bataille !");
+        Chien winner = getWinner(enemy);
     }
 }

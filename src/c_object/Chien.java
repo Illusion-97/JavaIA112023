@@ -1,5 +1,7 @@
 package c_object;
 
+import java.util.Random;
+
 // Une interface est "plan de plan", définis une structure (un contrat) que doit respecter une classe
 public interface Chien {
     public void bark();
@@ -10,4 +12,9 @@ public interface Chien {
         System.out.println(voice);
     }
     public void fight(Chien enemy);
+    default Chien getWinner(Chien enemy) {
+        Chien winner = new Random().nextBoolean() ? this : enemy;
+        winner.bark(winner + "remporte la bataille !");
+        return winner;
+    }
 }

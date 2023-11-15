@@ -28,7 +28,6 @@ public class Malinois extends Animal implements Chien {
     @Override
     public void fight(Chien enemy) {
         System.out.println(nom + " se bat pour l'honneur de son maître");
-        Chien winner = new Random().nextBoolean() ? this : enemy;
-        winner.bark(winner + "remporte la bataille !");
+        Chien winner = getWinner(enemy);
     }
 }
