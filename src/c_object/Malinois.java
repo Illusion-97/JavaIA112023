@@ -1,5 +1,7 @@
 package c_object;
 
+import java.util.Random;
+
 // implements indique qu'une classe respecte la structure déclarée dans une interface
 public class Malinois extends Animal implements Chien {
 
@@ -25,6 +27,8 @@ public class Malinois extends Animal implements Chien {
 
     @Override
     public void fight(Chien enemy) {
-
+        System.out.println(nom + " se bat pour l'honneur de son maître");
+        Chien winner = new Random().nextBoolean() ? this : enemy;
+        winner.bark(winner + "remporte la bataille !");
     }
 }

@@ -1,5 +1,7 @@
 package c_object; // pas de majuscules dans les noms de package
 
+import java.util.Random;
+
 // Pas d'espace, Commence par une majuscule et on en met une autre a chaque nouveau mot
 public class BergerAllemand extends Animal implements Chien {
     // Même principe pour les attributs et les méthodes, hormis la première lettre en minuscule
@@ -43,6 +45,8 @@ public class BergerAllemand extends Animal implements Chien {
 
     @Override
     public void fight(Chien enemy) {
-
+        System.out.println(nom + " se bat pour sa fierté");
+        Chien winner = new Random().nextBoolean() ? this : enemy;
+        winner.bark(winner + "remporte la bataille !");
     }
 }
